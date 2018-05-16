@@ -1,3 +1,8 @@
+cmd
+git config --global user.name "jl1480" #qyk1480
+git config --global user.email "1336726254@qq.com"
+git config --list  #查看是否成功
+
 D:
 cd Mygit
 git init  #创建
@@ -6,17 +11,6 @@ git add README.md
 git commit -m "add a readme file"
 
 
-
-将工作目录的文件放到Git仓库：
--git add 文件名
--git commit -m "做了什么"
-
-1修改 modified
-2暂存 staged
-3提交 committed
-
-add   commit
-checkout   reset
 
 git status
 
@@ -29,20 +23,28 @@ git commit -m "add a LICENSE file"
 
 git log #查看历史
 
-git reset --mixed HEAD~
-1移动HEAD的指向，将其指向上一个快照
-2将HEAD移动后指向的快照回滚到暂存区域
 
-git reset --soft HEAD~ 
-移动HEAD的指向，将其指向上一个快照
-
-git reset --hard HEAD~ 
-1移动HEAD的指向，将其指向上一个快照
-2将HEAD移动后指向的快照回滚到暂存区域
-3将暂存区域的文件还原到工作目录
-
-
-git reset 指定hash
+git reset 指定hash 向前 向后
 git reset 版本快照 文件名/路径
 
 git reset --hard hash值
+
+git branch 分支名 (创建)
+git log --decorate
+git checkout 分支名 (转)
+git log --decorate --oneline --graph --all
+
+git checkout master
+
+git merge 分支名(合并)
+
+git checkout -b 分支名(创建 转)
+
+git branch -d 分支名(删除)
+
+git reset --hard 分支名
+
+git stash（保护现场）
+git stash list  查看
+1.git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除
+2.git stash pop（回到现场）
